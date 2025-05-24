@@ -24,7 +24,7 @@ def callback():
     body = request.get_data(as_text=True)
     try:
         handler.handle(body, signature)
-except Exception as e:
+    except Exception as e:
         print(f"Error in handler: {e}")
         return 'Error', 500
     
